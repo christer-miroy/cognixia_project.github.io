@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communications Application</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="user-list-style.css" rel="stylesheet">
+  <link href="hide-element.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="tabsContainer m-2">
+    <!-- Tabs -->
+    <div class="navbar">
+      <div class="navTab col-3">
+        <a href="chat.html" class="navLink d-flex justify-content-center">Group Chat</a>
+      </div>
+      <div class="navTab col-3">
+        <a href="user-list.html" aria-current="page" class="navLink active d-flex justify-content-center">Manage
+          Users</a>
+      </div>
+      <div class="navTab col-3">
+        <a href="docs-list.html" class="navLink d-flex justify-content-center">Manage Documents</a>
+      </div>
+      <div class="navTab col-3">
+        <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink"
+          onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+  <div class="userListContainer m-2">
+    <!-- User List content -->
+    <div class="d-flex justify-content-start mt-4">
+      <!-- heading -->
+      <h3><b>Users</b></h3>
+    </div>
+    <!-- User Table-->
+    <div class="userTable mt-4" >
+      <table id="userTable">
+        <!-- table headers -->
+        <thead class="thead">
+          <tr class="tr">
+            <th class="colName">Name</th>
+            <th class="colEmail">User Email ID</th>
+            <th class="colAction"> </th>
+          </tr>
+        </thead>
+        <!-- table body -->
+        <tbody class="tbody">
+          <!-- Text User -->
+          <tr class="tr">
+            <td class="colName">Text User</td>
+            <td class="colEmail">textuser@gmail.com</td>
+            <td class="colAction">
+              <!-- Edit Link -->
+              <a href="edit-user.html" id="editUser">Edit</a> |
+              <!-- Button delete trigger modal -->
+              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" id="deleteUser">
+                Delete
+              </a>
+            </td>
+          </tr>
+          <!-- Anne Hunter -->
+          <tr class="tr">
+            <td class="colName">Anne Hunter</td>
+            <td class="colEmail">anne.hunter@mail.com</td>
+            <td class="colAction">
+              <a href="edit-user.html" id="editUser">Edit</a> |
+              <!-- Button trigger modal -->
+              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" id="deleteUser">
+                Delete
+              </a>
+            </td>
+          </tr>
+          <!-- Jale Boser -->
+          <tr class="tr">
+            <td class="colName">Jale Boser</td>
+            <td class="colEmail">Jale@yahoo.com</td>
+            <td class="colAction">
+              <a href="edit-user.html" id="editUser">Edit</a> |
+              <!-- Button trigger modal -->
+              <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" id="deleteUser">
+                Delete
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Delete Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <div class="modal-title w-100" id="modalLabel">Confirm User Deletion</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="okayBtn btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+          <button type="button" class="cancelBtn btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden">
+    <!-- hide unneccessary elements to avoid errors in console -->
+    <button type="submit" id="registerBtn" class="registerSuccess btn btn-outline-dark btn-sm">Register</button>
+    <button type="submit" id="loginBtn" class="loginBtn">Login</button>
+    <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink">Logout</a>
+  </div>
+  <script type="text/javascript" src="./js/user-list.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

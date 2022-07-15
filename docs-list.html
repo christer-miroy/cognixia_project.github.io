@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="docs-list-style.css" rel="stylesheet">
+    <link href="hide-element.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="tabsContainer m-2">
+        <!-- Tabs -->
+        <div class="navbar">
+            <div class="navTab col-3">
+                <a href="chat.html" class="navLink d-flex justify-content-center">Group Chat</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="user-list.html" class="navLink d-flex justify-content-center">Manage
+                    Users</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="docs-list.html" aria-current="page" class="navLink active d-flex justify-content-center">Manage
+                    Documents</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="myUploadsContainer m-2">
+        <!-- My Uploads content -->
+        <div class="d-flex justify-content-start mt-4">
+            <!-- heading -->
+            <h3><b>My Uploads</b></h3>
+        </div>
+        <!-- My Uploads Table -->
+        <div class="myUploadsTable mt-4">
+            <table class="table">
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="label">Label</th>
+                        <th class="fileName">File Name</th>
+                        <th class="action">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!-- Sales Report -->
+                    <tr class="tr">
+                        <td class="label">Sales Report</td>
+                        <td class="fileName">sales-Sep2014.xls</td>
+                        <td class="action">
+                            <!-- edit file link trigger modal -->
+                            <a href="#" class="editLink" data-bs-toggle="modal" data-bs-target="#editFileModal">Edit</a>
+                            |
+                            <!-- Delete Link Trigger Modal -->
+                            <a href="#" class="deleteLink" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">Delete</a> |
+                            <a href="share.html" class="shareLink">Share</a>
+                        </td>
+                    </tr>
+                    <!-- Quarterly Summary -->
+                    <tr class="tr">
+                        <td class="label">Quarterly Summary</td>
+                        <td class="fileName">SummaryQ4-2014.ppt</td>
+                        <td class="action">
+                            <!-- edit file link trigger modal -->
+                            <a href="#" class="editLink" data-bs-toggle="modal" data-bs-target="#editFileModal">Edit</a>
+                            |
+                            <!-- Delete Link Trigger Modal -->
+                            <a href="#" class="deleteLink" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">Delete</a> |
+                            <a href="share.html" class="shareLink">Share</a>
+                        </td>
+                    </tr>
+                    <!-- Projection 2013-14 -->
+                    <tr class="tr">
+                        <td class="label">Projection 2013-14</td>
+                        <td class="fileName">SalesProfitProjection.xls</td>
+                        <td class="action">
+                            <!-- edit file link trigger modal -->
+                            <a href="#" class="editLink" data-bs-toggle="modal" data-bs-target="#editFileModal">Edit</a>
+                            |
+                            <!-- Delete Link Trigger Modal -->
+                            <a href="#" class="deleteLink" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">Delete</a> |
+                            <a href="share.html" class="shareLink">Share</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Shared Uploads Content -->
+        <div class="d-flex justify-content-start mt-4">
+            <!-- heading -->
+            <h3><b>Shared Uploads</b></h3>
+        </div>
+        <!--Shared Uploads Table-->
+        <div class="sharedUploadsTable">
+            <table class="table">
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="sharedLabel">Label</th>
+                        <th class="sharedFileName">File Name</th>
+                        <th class="sharedBy">Shared By</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!-- Sales Team Attendance Sept 2014 -->
+                    <tr class="tr">
+                        <td class="sharedLabel">Sales Team Attendance Sept 2014</td>
+                        <td class="sharedFileName">Sale-Attend-Sep2014.xls</td>
+                        <td class="sharedBy">anne.hunter@mail.com</td>
+                    </tr>
+                    <!-- Office Rules -->
+                    <tr class="tr">
+                        <td class="sharedLabel">Office Rules</td>
+                        <td class="sharedFileName">OfficeRule.doc</td>
+                        <td class="sharedBy">hr@office.com</td>
+                    </tr>
+                    <!-- +Add Upload button -->
+                    <tr class="tr">
+                        <td class="sharedLabel">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="addUpload btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#addUploadModal">
+                                + Add Upload
+                            </button>
+                            <!-- Modal -->
+                            <div class="addUploadModal modal fade" id="addUploadModal" tabindex="-1"
+                                aria-labelledby="addUploadModal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center">
+                                            <h5 class="modal-title w-100" id="addUploadModalHeader">Upload</h5>
+                                            <button type="button" class="closeBtn btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body m-2">
+                                            <div class="row mt-2">
+                                                <!-- File Description -->
+                                                <div class="col-4">
+                                                    <label for="fileDescription" class="fileDescriptionLabel">File
+                                                        Description</label>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input type="text" id="fileDescription" class="fileDescriptionText"
+                                                        aria-describedby="fileDescription" placeholder="Sample File">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <!-- File Upload -->
+                                                <div class="col-4">
+                                                    <label for="fileUpload" class="fileUploadLabel">File Upload</label>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button"
+                                                        class="chooseFileBtn btn btn-secondary btn-sm">Choose
+                                                        File</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="sample" class="sampleDoc">Sample.doc</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="uploadBtn btn btn-secondary btn-sm"
+                                                data-bs-dismiss="modal">Upload Now</button>
+                                            <button type="button" class="cancelBtn btn btn-secondary btn-sm"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </td>
+                        <td class="sharedFileName"> </td>
+                        <td class="sharedBy"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- edit file link modal -->
+    <div class="editModal modal fade" id="editFileModal" tabindex="-1" aria-labelledby="editFileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title w-100" id="editFileModalHeader">Edit</h5>
+                    <button type="button" class="closeBtn btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-4">
+                        <div class="col-md-4 d-flex align-items-start">
+                            <label for="fileDescription" class="fileDescriptionLabel">File
+                                Description</label>
+                        </div>
+                        <div class="col-md-8 .ms-auto d-flex align-items-start">
+                            <input type="text" id="fileDescription" class="fileDescriptionText"
+                                aria-describedby="fileDescription" placeholder="Sales Report">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer col-md-7 d-flex align-items-start">
+                    <button type="button" class="saveBtn btn btn-secondary btn-sm" data-bs-dismiss="modal">Save</button>
+                    <button type="button" class="cancelBtn btn btn-secondary btn-sm"
+                        data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="deleteModal modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="deleteModalLabel">Confirm From Web Page</h5>
+                <button type="button" class="closeBtn btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="okayBtn btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+                <button type="button" class="cancelBtn btn btn-outline-dark"
+                    data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden">
+    <!-- hide unneccessary elements to avoid errors in console -->
+    <button type="submit" id="registerBtn" class="registerSuccess btn btn-outline-dark btn-sm">Register</button>
+    <button type="submit" id="loginBtn" class="loginBtn">Login</button>
+    <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink">Logout</a>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

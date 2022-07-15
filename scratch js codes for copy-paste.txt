@@ -1,0 +1,142 @@
+function login() {
+    var loginUser = {
+        //set DOM elements
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    }
+
+    //empty field validation
+    if ((loginUser.email == "") || (loginUser.password == "")) {
+        alert("Please enter email and password.");
+        return false;
+    }
+
+    console.log(JSON.parse(localStorage.getItem("userList")));
+}
+
+function registerUser(){
+    var user = {
+        //set DOM elements
+        id: Number(new Date()),
+        fullName: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    }
+
+        //empty field validation and matching password verification
+    if (user.fullName == "") {
+        alert("Please enter full name.");
+        return false;
+    } else if (user.email == ""){
+        alert("Please enter email");
+        return false;
+    } else if (user.password == "") {
+        alert("Please enter password.");
+        return false;
+    } else if (document.getElementById("confirmPassword").value == "") {
+        alert("Please enter password.");
+        return false;
+    } else if (user.password != document.getElementById("confirmPassword").value) {
+        //matching password verification
+        alert("Passwords does not match. Please try again.");
+        return false;
+    }
+    /* successful registration */
+    //insert user object to users array
+    users.push(user);
+    //convert to string
+    localStorage.setItem("userList", JSON.stringify(users));
+    //proceed to register-success.html
+    return true;
+}
+
+for (num = 0; num < loginArray.length; num++) {
+        /*
+        --login lang when num = 0
+        if ((loginArray[num].email == login.email) && (loginArray[num].password == login.password)) {
+            num = loginArray.length;
+            return true;
+        }
+        if ((loginArray[num].email != login.email) && (loginArray[num].password != login.password)) {
+            event.preventDefault();
+            alert("Invalid login credentials. Please try again.");
+            return false;
+        }*/
+        /* nested if (1) - pumapasok kahit mismatch ang email and password
+        if (loginArray[num].email == login.email) {
+            if (loginArray[num].password == login.password) {
+                num = loginArray.length;
+                return true;
+            } else {
+                event.preventDefault();
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            }
+        } */
+        /*nested if (2) - else statement partnered sa outer if
+        if (loginArray[num].email == login.email) {
+            if (loginArray[num].password == login.password) {
+                num = loginArray.length;
+                return true;
+            }
+        } else {
+            event.preventDefault();
+            alert("Invalid login credentials. Please try again.");
+            return false;
+        }
+        --error: --login lang when num = 0
+        */
+       /*nested if (3) - invalid login first
+       if (loginArray[num].email != login.email) {
+            if (loginArray[num].password != login.password) {
+                event.preventDefault();
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            } else {
+                num = loginArray.length;
+                return true;
+            } --error: --login lang when num = 0
+        }*/
+        /*nested if (4) 
+        if (loginArray[num].email != login.email) {
+            if (loginArray[num].password != login.password) {
+                event.preventDefault();
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            }
+        } else {
+            num = loginArray.length;
+            return true;
+        } */
+        /*
+        if (loginArray[num].email != login.email){
+            if (loginArray[num].password =! login.password) {
+                event.preventDefault();
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            }
+        }
+        num = loginArray.length;
+        return true;
+        */
+       /*
+       if (loginArray[num].email != login.email) {
+            //not matching emails = true
+            if (loginArray[num].password != login.password){
+                //not matching email and password = true
+                event.preventDefault();
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            }
+        } else if (loginArray[num].password != login.password){
+            //matching email = true; not matching password = true
+            event.preventDefault();
+            alert("Invalid login credentials. Please try again.");
+            return false;
+        } else {
+            //match email = true; match password = true
+            return true;
+        }
+        */
+    }
+

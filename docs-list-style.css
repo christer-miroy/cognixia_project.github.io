@@ -1,0 +1,318 @@
+/* default styling for tabs */
+.navTab {
+    /* set borders */
+    border: 2px solid black;
+    background-color: #BFBFBF;
+}
+
+.navLink {
+    /* set font */
+    text-decoration: none;
+    color: black;
+}
+
+.navLink.active {
+    /* set active tab style */
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+/* set hover effect */
+.navTab:hover {
+    background-color: white;
+}
+
+.navLink:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* docs-list.html stylesheet */
+/* (1) My Uploads Table */
+.myUploadsTable .table {
+    /* set table font size */
+    font-size: medium;
+}
+
+.myUploadsTable .table .thead {
+    /* top border */
+    border-top: 2px solid black;
+    /* background color */
+    background-color: #CCCCCC;
+}
+
+.myUploadsTable .table .thead .tr .label, .myUploadsTable .table .tbody .tr .label {
+    /* left border */
+    border-left: 2px solid black;
+    /* set column width */
+    width: 40vw;
+}
+
+.myUploadsTable .table .tbody tr:last-child {
+    /* bottom border */
+    border-bottom: 2px solid black;
+    /* set height for the last row */
+    height: 100px;
+    /*vertical align to top */
+    vertical-align: top;
+}
+
+.myUploadsTable .table .thead tr .fileName, .myUploadsTable .table .tbody tr .fileName {
+    /* set left and right border */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    /* set column width */
+    width: 40vw;
+    /* text align to center */
+    text-align: center;
+}
+
+.myUploadsTable .table .thead tr .action, .myUploadsTable .table .tbody tr .action {
+    /* right border */
+    border-right: 2px solid black;
+    /* text align to center */
+    text-align: center;
+    /* set column width */
+    width: 20vw;
+}
+
+.myUploadsTable .table .tbody tr .action .editLink, .myUploadsTable .table .tbody tr .action .deleteLink, .myUploadsTable .table .tbody tr .action .shareLink  {
+    /* set default decoration */
+    text-decoration: none;
+    color: black
+}
+
+.myUploadsTable .table .tbody tr .action .editLink:hover {
+    /* set hover effect */
+    color: #20c997;
+    text-decoration: underline;
+}
+
+.myUploadsTable .table .tbody tr .action .deleteLink:hover {
+    /* set hover effect */
+    color: #DC3545;
+    text-decoration: underline;
+}
+
+.myUploadsTable .table .tbody .tr .action .shareLink:hover {
+    /* set hover effect */
+    color: #0D6EFD;
+    text-decoration: underline;
+}
+
+.myUploadsTable .table .tbody tr .action .modal .modal-dialog .modal-content .modal-header .closeBtn {
+    /* set border */
+    border: 2px solid black;
+}
+
+/* (2) Shared Uploads Table */
+.sharedUploadsTable {
+    /* set font size */
+    font-size: medium;
+}
+
+.sharedUploadsTable .table .thead {
+    /* top border */
+    border-top: 2px solid black;
+    /* background color */
+    background-color: #CCCCCC;
+
+}
+
+.sharedUploadsTable .table .thead, .sharedUploadsTable .table .tbody {
+    /* set vertical alignment */
+    vertical-align: top;
+}
+
+.sharedUploadsTable .table .thead .tr .sharedLabel, .sharedUploadsTable .table .tbody .tr .sharedLabel {
+    /* ***column 1*** */
+    /* left border */
+    border-left: 2px solid black;
+    /* set column width */
+    width: 40vw;
+}
+
+.sharedUploadsTable .table .tbody .tr:last-child {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.sharedUploadsTable .table .thead .tr .sharedFileName, .sharedUploadsTable .table .tbody .tr .sharedFileName {
+    /* ***column 2*** */
+    /* set left and right borders */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    /* set column width */
+    width: 40vw;
+    /* text alignment to center */
+    text-align: center;
+}
+
+.sharedUploadsTable .table .thead tr .sharedBy, .sharedUploadsTable .table .tbody tr .sharedBy {
+    /* ***column 3*** */
+    /* right border */
+    border-right: 2px solid black;
+    /* text alignment to center */
+    text-align: center;
+    /* set column width */
+    width: 20vw;
+}
+
+.sharedUploadsTable .table .tbody .tr:nth-child(2) {
+    /* set row width of second to the last row */
+    height: 100px;
+}
+
+.sharedUploadsTable .table .tbody .tr:last-child .sharedLabel .addUpload {
+    /* set background color of add upload button */
+    background-color: #66FFFF;
+}
+
+.sharedUploadsTable .table .tbody .tr:last-child .sharedLabel .addUpload:hover {
+    /* set effects on hover */
+    color: #66FFFF;
+    background-color: black;
+}
+
+/* Add Upload Modal */
+.addUploadModal .modal-content {
+    /* set border */
+    border: 2px solid black;
+}
+
+.addUploadModal .modal-content .modal-header {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.addUploadModal .modal-content .modal-header .closeBtn {
+    /* set border */
+    border: 2px solid black;
+}
+
+.addUploadModal .modal-content .modal-body .chooseFileBtn:hover {
+    /* set hover effect */
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
+    color: black;
+}
+
+.addUploadModal .modal-content .modal-body .fileDescriptionText {
+    /* set width of text field */
+    width: 20vw;
+    /* set border */
+    border: 2px solid black;
+}
+
+.addUploadModal .modal-content .modal-footer {
+    /* align buttons to the left */
+    justify-content: flex-start;
+}
+
+.addUploadModal .modal-content .modal-footer .uploadBtn:hover {
+    /* set hover effect */
+    background-color: #20c997;
+    border-color: #20c997;
+    color: black;
+}
+
+.addUploadModal .modal-content .modal-footer .cancelBtn:hover {
+    /* set hover effect */
+    background-color: #DC3545;
+    border-color: #DC3545;
+    color: black;
+}
+
+/* Edit Modal */
+.editModal .modal-dialog .modal-content {
+    /* set border */
+    border: 2px solid black;
+}
+
+.editModal .modal-dialog .modal-content .modal-header {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.editModal .modal-dialog .modal-content .modal-header .closeBtn {
+    /* set border */
+    border: 2px solid black;
+}
+
+.editModal .modal-dialog .modal-content .modal-body .fileDescriptionText {
+    /* set width of the text field */
+    width: 20vw;
+    /* set border color */
+    border: 2px solid black;
+}
+
+.editModal .modal-dialog .modal-content .modal-body .fileDescriptionLabel {
+    /* set font weight */
+    font-weight: bold;
+}
+
+.editModal .modal-dialog .modal-content .modal-footer .saveBtn:hover {
+    /* set hover effect */
+    background-color: #20c997;
+    border-color: #20c997;
+    color: black;
+}
+
+.editModal .modal-dialog .modal-content .modal-footer .cancelBtn:hover {
+    /* set hover effect */
+    background-color: #DC3545;
+    border-color: #DC3545;
+    color: black;
+}
+
+/* Delete Modal Stylesheet */
+.deleteModal .modal-dialog .modal-content {
+    /* set border */
+    border: 2px solid black;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-header {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-header .closeBtn {
+    /* set border */
+    border: 2px solid black;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-body {
+    /* set alignment */
+    text-align: center;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-footer {
+    /* set alignment */
+    display: flex;
+    justify-content: center;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-footer .okayBtn {
+    /* set style */
+    border: 2px solid #0D6EFD;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-footer .okayBtn:hover {
+    /* set hover */
+    border: 2px solid #0D6EFD;
+    background-color: #0D6EFD;
+    color: white;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-footer .cancelBtn {
+    /* set style */
+    border: 2px solid #DC3545;
+}
+
+.deleteModal .modal-dialog .modal-content .modal-footer .cancelBtn:hover {
+    /* set hover */
+    border: 2px solid #DC3545;
+    background-color: #DC3545;
+    color: black;
+}

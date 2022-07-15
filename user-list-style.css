@@ -1,0 +1,120 @@
+/* default styling for tabs */
+.navTab {
+    /* set borders */
+    border: 2px solid black;
+    background-color: #BFBFBF;
+}
+
+.navLink {
+    /* set font */
+    text-decoration: none;
+    color: black;
+}
+
+.navLink.active {
+    /* set active tab style */
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+/* set hover effect */
+.navTab:hover {
+    background-color: white;
+}
+
+.navLink:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* user-list.html stylesheet */
+.userTable {
+    /* set font size */
+    font-size: medium;
+}
+
+.userTable .thead {
+    /* top border */
+    border-top: 2px solid black;
+    /* background color */
+    background-color: #CCCCCC;
+}
+
+.userTable .thead .tr .colName, .userTable tbody .tr .colName {
+    /* left border */
+    border-left: 2px solid black;
+    /* set column width */
+    width: 40vw;
+}
+
+.userTable .tbody .tr:last-child {
+    /* bottom border */
+    border-bottom: 2px solid black;
+    /* set height for the last row */
+    height: 100px;
+    /* align text to top */
+    vertical-align: top;
+}
+
+.userTable .thead .tr .colAction, .userTable .tbody .tr .colAction {
+    /* right border */
+    border-right: 2px solid black;
+    /* set text alignment to center */
+    text-align: center;
+    /* set column width */
+    width: 20vw;
+}
+
+.userTable .thead .tr .colEmail, .userTable .tbody .tr .colEmail {
+    /* set left and right border */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    /* set column width */
+    width: 40vw;
+    /* set text alignment to center */
+    text-align: center;
+}
+
+/* delete modal stylesheet */
+.modal-content {
+    /* set border */
+    border: 2px solid black;
+}
+
+.modal-header {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.modal-header .modal-title {
+    /* set font weight */
+    font-weight: bold;
+}
+
+.modal-header .btn-close {
+    /* set border */
+    border: 2px solid black;
+}
+
+.modal-footer .okayBtn {
+    /* set border */
+    border: 2px solid #2929FF;
+}
+
+.modal-footer .okayBtn:hover {
+    /* hover effect */
+    background-color: #2929FF;
+    text-decoration: underline;
+}
+
+.modal-footer .cancelBtn {
+    /* set border */
+    border: 2px solid #DC3545;
+}
+
+.modal-footer .cancelBtn:hover {
+    /* hover effect */
+    background-color: #DC3545;
+    text-decoration: underline;
+}

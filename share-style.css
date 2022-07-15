@@ -1,0 +1,169 @@
+/* default styling for tabs */
+.navTab {
+    /* set borders */
+    border: 2px solid black;
+    background-color: #BFBFBF;
+}
+
+.navLink {
+    /* set font */
+    text-decoration: none;
+    color: black;
+}
+
+.navLink.active {
+    /* set active tab style */
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+/* set hover effect */
+.navTab:hover {
+    background-color: white;
+}
+
+.navLink:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* share.html stylesheet */
+/* (1) Upload Sharing */
+.uploadSharingTable table thead {
+    /* set top border */
+    border-top: 2px solid black;
+    /* set background color */
+    background-color: #BFBFBF;
+}
+
+.uploadSharingTable table thead tr .sharedUser, .uploadSharingTable table tbody tr .sharedUser {
+    /* ***column 1*** */
+    /* set left border */
+    border-left: 2px black solid;
+    /* set column width */
+    width: 50vw;
+}
+
+.uploadSharingTable table tbody {
+    /* set vertical alignment */
+    vertical-align: top;
+}
+
+.uploadSharingTable table tbody tr:last-child {
+    /* ***last row*** */
+    /* set border */
+    border-bottom: 2px solid black;
+    /* set row height */
+    height: 100px;
+}
+
+.uploadSharingTable table thead tr .action, .uploadSharingTable table tbody tr .action {
+    /* ***column 2*** */
+    /* set border */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    /* set column width */
+    width: 50vw;
+    /* set text alignment */
+    text-align: center;
+}
+
+.uploadSharingTable table tbody tr .action a {
+    /* set default format of remove link modal */
+    color: black;
+    text-decoration: none;
+}
+
+.uploadSharingTable table tbody tr .action a:hover {
+    /* set hover effect */
+    text-decoration: underline;
+    color: #DC3545;
+}
+
+/* (2) Add Sharing */
+.chooseUser {
+    /* set width */
+    width: 99vw;
+    /* set outline */
+    border: 2px solid black;
+    /* set height */
+    height: 150px;
+}
+
+.chooseUser .form {
+    /* set margin */
+    margin: 20px;
+}
+
+.chooseUser .form label, .chooseUser .form .btn {
+    /* set margin */
+    margin: 10px;
+}
+
+.chooseUser .form select {
+    /* set width */
+    width: 20vw;
+    /*set margin */
+    margin: 10px;
+}
+
+.chooseUser .form .btn {
+    /* set width */
+    width: 8vw;
+}
+
+.chooseUser .form .btn:hover {
+    /* set hover effect */
+    background-color: #20c997;
+    color: black;
+}
+
+/* share.html remove modal */
+.removeModal .modal-dialog {
+    /* general style */
+    font-size: small;
+
+}
+
+.removeModal .modal-dialog .modal-content {
+    /* set border */
+    border: 2px solid black;
+}
+
+.removeModal .modal-dialog .modal-content .modal-header {
+    /* set bottom border */
+    border-bottom: 2px solid black;
+}
+
+.removeModal .modal-dialog .modal-content .modal-header .btn-close {
+    /* set border */
+    border: 2px solid black;
+}
+
+.removeModal .modal-dialog .modal-content .modal-footer {
+    /* align buttons to the center */
+    justify-content: center;
+}
+
+.removeModal .modal-dialog .modal-content .modal-footer .okayBtn {
+    /* set border */
+    border: 2px solid #0000FF;
+}
+
+.removeModal .modal-dialog .modal-content .modal-footer .cancelBtn {
+    /* set border */
+    border: 2px solid black;
+}
+
+.removeModal .modal-dialog .modal-content .modal-footer .okayBtn:hover {
+    /* create hover effects */
+    background-color: #0000FF;
+    border: 2px solid #0000FF;
+}
+
+.removeModal .modal-dialog .modal-content .modal-footer .cancelBtn:hover {
+    /* create hover effects */
+    background-color: #DC3545;
+    border: 2px solid #DC3545;
+}

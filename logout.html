@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="logout-style.css" rel="stylesheet">
+    <link href="hide-element.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Welcome -->
+        <div class="d-flex justify-content-center m-5">
+            <h2>Welcome to Users Module</h2>
+        </div>
+        <!-- Users -->
+        <div class="d-flex justify-content-center">
+            <div class="card w-50">
+                <!-- Existing Users -->
+                <div class="card-body d-flex justify-content-center">
+                    <h5 class="card-title">Existing Users</h5>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                    <a href="login.html"><button type="button" class="btn btn-outline-dark btn-sm">Login</button></a>
+                </div>
+                <!-- New Users -->
+                <div class="card-body d-flex justify-content-center">
+                    <h5 class="card-title">New Users</h5>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                    <a href="register.html"><button type="button"
+                            class="btn btn-outline-dark btn-sm">Register</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- Logout -->
+        <div class="d-flex justify-content-center">
+            <p class="h6 d-flex align-items-center">You have been logged out</p>
+        </div>
+    </div>
+    <div class="hidden">
+        <!-- hide unneccessary elements to avoid errors in console -->
+        <button type="submit" id="registerBtn" class="registerSuccess btn btn-outline-dark btn-sm">Register</button>
+        <button type="submit" id="loginBtn" class="loginBtn">Login</button>
+        <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink">Logout</a>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

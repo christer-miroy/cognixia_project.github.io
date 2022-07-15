@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="share-style.css" rel="stylesheet">
+    <link href="hide-element.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="tabsContainer m-2">
+        <!-- Tabs -->
+        <div class="navbar">
+            <div class="navTab col-3">
+                <a href="chat.html" class="navLink d-flex justify-content-center">Group Chat</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="user-list.html" class="navLink d-flex justify-content-center">Manage
+                    Users</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="docs-list.html" aria-current="page" class="navLink active d-flex justify-content-center">Manage
+                    Documents</a>
+            </div>
+            <div class="navTab col-3">
+                <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </div>
+    <!-- Upload Sharing Content -->
+    <div class="uploadSharingContainer m-2">
+        <!-- heading -->
+        <div class="d-flex justify-content-start mt-4">
+            <h3><b>Upload Sharing : </b> Sample.txt</h3>
+        </div>
+        <!-- Upload Sharing Table -->
+        <div class="uploadSharingTable mt-4">
+            <table class="table">
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="sharedUser">Shared User</th>
+                        <th class="action">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!-- Anne Hunter -->
+                    <tr>
+                        <td class="sharedUser">Anne Hunter</td>
+                        <td class="action">
+                            <!-- Remove Link Trigger Modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#removeModal">Remove</a>
+                            
+                        </td>
+                    </tr>
+                    <!-- Text User -->
+                    <tr>
+                        <td class="sharedUser">Text User</td>
+                        <td class="action">
+                            <!-- Remove Link Trigger Modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#removeModal">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Add Sharing Content -->
+    <div class="addSharingContainer m-2">
+        <!-- heading -->
+        <div class="d-flex justify-content-start m-4">
+            <h3><b>Add Sharing</b></h3>
+        </div>
+        <!-- Choose User -->
+        <div class="chooseUser mt-4">
+            <form class="form">
+                <label for="user"><b>Choose User : </b></label>
+                <select name="users" id="users">
+                    <option value="default" selected disabled>Select User</option>
+                    <option value="jBose">J Bose</option>
+                    <option value="hr">HR</option>
+                    <option value="harshZaveri">Harsh Zaveri</option>
+                </select>
+                <button type="button" class="btn btn-secondary btn-sm">Add Share</button>
+            </form>
+        </div>
+    </div>
+    <!-- Remove Modal -->
+    <div class="removeModal modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="removeModalLabel">Confirm from Web Page
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="okayBtn btn btn btn-outline-secondary btn-sm"
+                    data-bs-dismiss="modal">Okay</button>
+                <button type="button" class="cancelBtn btn btn btn-outline-secondary btn-sm"
+                    data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden">
+    <!-- hide unneccessary elements to avoid errors in console -->
+    <button type="submit" id="registerBtn" class="registerSuccess btn btn-outline-dark btn-sm">Register</button>
+    <button type="submit" id="loginBtn" class="loginBtn">Login</button>
+    <a href="logout.html" class="navLink d-flex justify-content-center" id="logoutLink">Logout</a>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
